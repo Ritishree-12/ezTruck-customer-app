@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "project_number": "402174502187",
+    "firebase_url": "https://flutter-driver-app-db0db-default-rtdb.firebaseio.com",
+    "project_id": "flutter-driver-app-db0db",
+    "storage_bucket": "flutter-driver-app-db0db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:402174502187:android:1c0704fc60fe5dc73b916e",
+        "android_client_info": {
+          "package_name": "com.EzTruck"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "402174502187-76uuo60lk90v93pd40pgn3bkqgojqafq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkriy5t5d-4-M7pdT37aAQ8bu_xr-QRnQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "402174502187-76uuo60lk90v93pd40pgn3bkqgojqafq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "402174502187-a7nbs1bcb0gj2be0r7pam9c3tbni654a.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.eztruck.user"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:402174502187:android:92a102fd300d14d63b916e",
+        "android_client_info": {
+          "package_name": "com.EzTruckPartner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "402174502187-76uuo60lk90v93pd40pgn3bkqgojqafq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkriy5t5d-4-M7pdT37aAQ8bu_xr-QRnQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "402174502187-76uuo60lk90v93pd40pgn3bkqgojqafq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "402174502187-a7nbs1bcb0gj2be0r7pam9c3tbni654a.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.eztruck.user"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
