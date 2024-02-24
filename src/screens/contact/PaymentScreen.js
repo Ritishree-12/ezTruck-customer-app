@@ -5,8 +5,6 @@ import HomeMap from '../../map/HomeMap';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { clearBookingNotification, clearDriverArrivedNotification, clearDropOff } from '../../utils/notificationReducer';
 import { useDispatch } from 'react-redux';
-// import Icon from 'react-native-vector-icons/MaterialIcons';
-// import { Alert } from 'react-native';
 
 
 const PaymentScreen = ({ route, navigation }) => {
@@ -18,7 +16,6 @@ const PaymentScreen = ({ route, navigation }) => {
     const [selectedPaymentMethod, setSelectedPaymentMethod] = useState(null);
     const [modalVisible, setModalVisible] = useState(false);
 
-    // Function to toggle modal visibility
     const toggleModal = () => {
         setModalVisible(!modalVisible);
     };
@@ -27,22 +24,13 @@ const PaymentScreen = ({ route, navigation }) => {
         dispatch(clearBookingNotification());
         dispatch(clearDriverArrivedNotification());
         dispatch(clearDropOff());
-        navigation.navigate('Home');
+        // navigation.navigate('FeedBack');
+        navigation.navigate('FeedBack');
     }
-
-    const colors = {
-        primary: '#EE272E',
-        secondary: '#EE272E',
-        background: '#ECF0F1',
-        text: '#2C3E50',
-    };
-
-    // Function to handle selection of payment method
     const handlePaymentMethodSelection = (paymentMethod) => {
         setSelectedPaymentMethod(paymentMethod);
     }
 
-    // Function for payment option if it's selected
     const renderSelectButton = (paymentMethod) => {
         if (selectedPaymentMethod === paymentMethod) {
             return (
@@ -144,10 +132,10 @@ const PaymentScreen = ({ route, navigation }) => {
                             <Text style={{ marginBottom: 10, fontSize: 22, color: 'black' }}>₹800</Text>
                             {/* Dashed line */}
                             <View style={styles.dashedLine1}></View>
-                            <Text style={{ textAlign: 'center', fontWeight: 'bold', fontsize: 16 }}>How is your Trip ?</Text>
-                            <Text style={{ textAlign: 'center', fontWeight: '400', fontsize: 16, padding: 8 }}>Your feedback will help us to improve our driving experience</Text>
+                            <Text style={{ textAlign: 'center', fontWeight: 'bold', fontSize: 16 }}>How is your Trip ?</Text>
+                            <Text style={{ fontWeight: '400', fontSize: 16, padding: 8 , textAlign: 'center',}}>Your feedback will help us to improve our driving experience</Text>
                             <TouchableOpacity style={styles.modalButton} onPress={handleBackHome}>
-                                <Text style={styles.modalButtonText}>back to home</Text>
+                                <Text style={styles.modalButtonText}>Give Feedback</Text>
                             </TouchableOpacity>
                         </View>
                     </View>
@@ -403,7 +391,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#EE272E',
         borderRadius: 25,
         paddingVertical: 10,
-        width: 250,
+        width: '100%',
         margin:10
     },
 

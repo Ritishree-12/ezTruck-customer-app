@@ -1,24 +1,30 @@
 import React, { useEffect, useState } from 'react';
-import { StyleSheet, View, Text, Image, Pressable, StatusBar } from 'react-native';
+import { StyleSheet, View, Text, Image, Pressable, StatusBar, Modal, TouchableOpacity } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { AirbnbRating } from 'react-native-ratings';
-import HomeMap from '../../map/HomeMap'
+import HomeMap from '../../map/HomeMap';
+import { useNavigation } from '@react-navigation/native';
 
-
-const FeedBack = ({ route, navigation }) => {
+const FeedBack = () => {
   const [rating, setRating] = useState(0);
-
+  const [modalVisible, setModalVisible] = useState(false);
+  const navigation = useNavigation();
 
   const handleSubmitRating = () => {
     console.log("Rating submitted:", rating);
+    setModalVisible(true);
   };
 
   return (
     <SafeAreaView style={styles.container}>
       {/* Map Container */}
-      <StatusBar translucent={true} />
+      <StatusBar
+        translucent={true}
+        barStyle="dark-content"
+        backgroundColor="transparent"
+      />
       <View style={styles.mapContainer}>
-     <HomeMap/>
+        <HomeMap />
       </View>
 
       {/* Header */}
@@ -37,26 +43,26 @@ const FeedBack = ({ route, navigation }) => {
           <Image source={require('../../../assets/profilemenu.png')} style={styles.secProfile} />
           <View style={{ width: '60%' }}>
             <Text style={styles.profileName}>Ritishree Gochhayat</Text>
-            <View style={{flexDirection:'row',margin:3}}>
-            <Image source={require('../../../assets/Shape.png')} style={styles.msgImg} />
-            <Text style={{marginLeft:3,fontSize:16}}>{rating}</Text>
+            <View style={{ flexDirection: 'row', margin: 3 }}>
+              <Image source={require('../../../assets/Shape.png')} style={styles.msgImg} />
+              <Text style={{ marginLeft: 3, fontSize: 16 }}>{rating}</Text>
             </View>
           </View>
           <View style={styles.msgBackground}>
             <Image source={require('../../../assets/msg1.png')} style={styles.msgImg} />
           </View>
         </View>
-        <Text style={{ fontSize: 16, fontWeight: 'bold', color: 'black', textAlign: 'center',padding:10}}>
+        <Text style={{ fontSize: 16, fontWeight: 'bold', color: 'black', textAlign: 'center', padding: 10 }}>
           How is your trip with ezTruck
         </Text>
         {/* Rating Section */}
         <View style={styles.ratingSection}>
           <AirbnbRating
-           showRating={false}
-           defaultRating={rating}
-           size={30}
-           onFinishRating={setRating} 
-           selectedColor="#EE272E"
+            showRating={false}
+            defaultRating={rating}
+            size={30}
+            onFinishRating={setRating}
+            selectedColor="#EE272E"
           />
         </View>
       </View>
@@ -66,6 +72,33 @@ const FeedBack = ({ route, navigation }) => {
           <Text style={styles.buttonText}>Submit</Text>
         </Pressable>
       </View>
+
+      {/* Modal */}
+      <Modal
+        animationType="slide"
+        transparent={true}
+        visible={modalVisible}
+        onRequestClose={() => {
+          setModalVisible(!modalVisible);
+        }}
+      >
+        <View style={styles.modalContainer}>
+          <View style={styles.modalContent}>
+            <Image source={require('../../../assets/ThankYou.png')} style={styles.modalImg} />
+            <Text style={{ alignItems: 'center', fontWeight: 'bold', color: 'black' }}>Thank You</Text>
+            <Text style={styles.thankYouText}>Thank You for your valuable feedback</Text>
+            <TouchableOpacity
+              style={styles.modalButton}
+              onPress={() => {
+                setModalVisible(!modalVisible);
+                navigation.navigate('HomeScreen'); // Navigate to the 'Home' screen
+              }}
+            >
+              <Text style={styles.modalButtonText}>Back to Home</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </Modal>
     </SafeAreaView>
   );
 };
@@ -129,7 +162,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     padding: 10,
     height: '21%',
-    marginBottom:10
+    marginBottom: 10
   },
   secProfile: {
     width: 50,
@@ -138,7 +171,6 @@ const styles = StyleSheet.create({
   profileName: {
     fontSize: 14,
     fontWeight: 'bold',
-   
   },
   msgImg: {
     width: 20,
@@ -151,13 +183,49 @@ const styles = StyleSheet.create({
     height: 40,
     justifyContent: 'center',
     alignItems: 'center',
-   
   },
   section2: {},
   ratingSection: {
     alignItems: 'center',
     textAlign: 'center',
-    // marginTop:14
+  },
+  // Modal styles
+  modalContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  },
+  modalContent: {
+    backgroundColor: '#fff',
+    borderRadius: 10,
+    padding: 20,
+    alignItems: 'center',
+  },
+  modalText: {
+    fontSize: 18,
+    marginBottom: 20,
+  },
+  modalButton: {
+    backgroundColor: '#EE272E',
+    borderRadius: 25,
+    paddingVertical: 10,
+    width: 200,
+    margin: 10
+  },
+  modalButtonText: {
+    color: 'white',
+    fontSize: 16,
+    fontWeight: 'bold',
+    textAlign: 'center'
+  },
+  modalImg: {
+    height: 100,
+    width: 100
+  },
+  thankYouText: {
+    textAlign: 'center',
+    marginBottom: 20,
   },
 });
 

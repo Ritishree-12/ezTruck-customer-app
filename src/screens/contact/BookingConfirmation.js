@@ -67,7 +67,7 @@ const BookingConfirmation = ({ route, navigation }) => {
          dispatch(clearBookingNotification());
          dispatch(customerDriverDropoffCompleted());
          dispatch(clearDropOff());
-         navigation.navigate("Home")
+         navigation.navigate("HomeScreen")
         } 
         else if (response.data.status === "0") {
         console.log("Error in Waiting Screen in handleCancelBooking", response.data.message)
@@ -162,7 +162,7 @@ const BookingConfirmation = ({ route, navigation }) => {
                     <Text style={styles.otpsection1}>{bookingData.otp}</Text>
                 </View>
                 <View style={styles.section1}>
-                    <Text style={styles.text1}>Your Booking is confirmed</Text>
+                    <Text style={styles.text1}>Your Booking is confirmation</Text>
                 </View>
                 <View style={styles.buttonsContainer}>
                     <View style={styles.profileContainer}>

@@ -266,23 +266,22 @@ const styles = StyleSheet.create({
     top: 2,
     borderRadius: 6,
   },
+  editProfileButton: {
+    backgroundColor: '#EE272E',
+    width: 90,
+    height: 32,
+    left: 172,
+    // top: 2,
+    borderRadius: 6,
+  },
   editProfileButtonText: {
     color: 'white',
-    padding: 2,
-    ...Platform.select({
-      android: {
-        fontFamily: 'Montserrat',
-        fontWeight: 'bold',
-      },
-      ios: {
-        fontFamily: 'Montserrat',
-        fontWeight: 'bold',
-      },
-      default: {
-        fontFamily: 'Montserrat',
-        fontWeight: 'bold',
-      },
-    }),
+    padding: 6,
+    alignItems: 'center',
+    textAlign: 'center',
+    fontWeight: '600'
+
+
   },
   icon: {
     width: 20,

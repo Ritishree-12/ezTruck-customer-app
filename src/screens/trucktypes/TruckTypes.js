@@ -32,7 +32,7 @@ const TruckTypes = ({distance, duration, origin, destination, driverDetails}) =>
           capacity: "1500kg",
           // weitage: "Small Pickup",
           itemDetails:"This vehicle has a large payload capacity of 3.5 tones approximately. capable of carrying construction goods,domestic goods and house/office shifting.",
-          image: require("../../../assets/largeVeichle.png"),
+          image: require("../../../assets/largeVehicle.png"),
         };
       case 'small_pickup': 
       return {
@@ -43,7 +43,7 @@ const TruckTypes = ({distance, duration, origin, destination, driverDetails}) =>
             // weitage: "Large Pickup",
             itemDetails:
               "This vehicle has a large payload capacity of 3.5 tones approximately. capable of carrying construction goods,domestic goods and house/office shifting.",
-            image: require("../../../assets/choose3.png"),
+            image: require("../../../assets/largeVehicle.png"),
       };
       case 'large_pickup':
         return {
@@ -53,7 +53,7 @@ const TruckTypes = ({distance, duration, origin, destination, driverDetails}) =>
           capacity: "3500kg",
           // weitage: "Large Pickup",
           itemDetails:"This vehicle has a large payload capacity of 3.5 tones approximately. capable of carrying construction goods,domestic goods and house/office shifting.",
-          image: require("../../../assets/choose3.png"),
+          image: require("../../../assets/largeVehicle.png"),
         };
       case 'eicher': 
       return {
@@ -63,7 +63,7 @@ const TruckTypes = ({distance, duration, origin, destination, driverDetails}) =>
         capacity: "4000kg",
         // weitage: "Large Pickup",
         itemDetails:"This vehicle has a large payload capacity of 3.5 tones approximately. capable of carrying construction goods,domestic goods and house/office shifting.",
-        image: require("../../../assets/choose3.png"),
+        image: require("../../../assets/largeVehicle.png"),
       }
     }
   };
@@ -162,8 +162,8 @@ const onSelectTruck =(item)=>{
        backgroundColor: "#EE272E",
        borderColor: "#EE272E",
        borderRadius: 40,
-       padding: 20,
-       margin: 10,  // Check this margin
+       padding: 14,
+       margin: 10,
        alignItems: 'center',
        borderWidth: 1,
       }}>

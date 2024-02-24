@@ -2802,10 +2802,10 @@ caniuse-lite@^1.0.30001565:
   resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001574.tgz"
   integrity sha512-BtYEK4r/iHt/txm81KBudCUcTy7t+s9emrIaHqjYurQ10x71zJ5VQ9x1dYPcz/b+pKSp4y/v1xSI67A+LzpNyg==
 
-cashfree-pg-api-contract@^2.0.5:
-  version "2.0.5"
-  resolved "https://registry.npmjs.org/cashfree-pg-api-contract/-/cashfree-pg-api-contract-2.0.5.tgz"
-  integrity sha512-ykNtvkreICVryPyNkvNBtTaWE4B/5E2eoUcGkOi+qM+FzPG6nIWaZD7nsy5jVvRFX3NpQ/PLdHxxF7+DLhwaXw==
+cashfree-pg-api-contract@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.npmjs.org/cashfree-pg-api-contract/-/cashfree-pg-api-contract-2.0.6.tgz"
+  integrity sha512-iv03uNjjkAXFMyOJLX2d8S6XaDA4ynz669FXEyPm/AjWzHOxkMpziMG785/euceP/llQxpDI3sVgrQ/wcEI4nQ==
 
 chalk@^2.4.2:
   version "2.4.2"
@@ -6118,12 +6118,12 @@ react-native-app-intro-slider@^4.0.4:
   resolved "https://registry.npmjs.org/react-native-app-intro-slider/-/react-native-app-intro-slider-4.0.4.tgz"
   integrity sha512-Zkjaol6X3BbZkHUpVDj2LjdidpS6rCgKi0fx80xgGKa0pHxBRd4swWTv2bHnnvu5k1/HXwYk0mY2TbK+2jHl5w==
 
-react-native-cashfree-pg-sdk@^2.1.7:
-  version "2.1.7"
-  resolved "https://registry.npmjs.org/react-native-cashfree-pg-sdk/-/react-native-cashfree-pg-sdk-2.1.7.tgz"
-  integrity sha512-LKCCaqKZY74aad91g6IKWGMmO8xHWDq/UjZs3Gwr1LOuofk/1T8CQhDRn0Kmge9Nr5Kqud61a/jVNhBwjql7Bg==
+react-native-cashfree-pg-sdk@^2.1.9:
+  version "2.1.9"
+  resolved "https://registry.npmjs.org/react-native-cashfree-pg-sdk/-/react-native-cashfree-pg-sdk-2.1.9.tgz"
+  integrity sha512-Kzzpqw+9enDpq7YtjDsqwWbZMLHAikGPtgW0Xay5wVxOKLk7InF9h51jCWdNmPWA4egutrLtkPn0QmYDP6wsDQ==
   dependencies:
-    cashfree-pg-api-contract "^2.0.5"
+    cashfree-pg-api-contract "^2.0.6"
 
 react-native-config@^1.5.1:
   version "1.5.1"
@@ -6149,10 +6149,10 @@ react-native-geolocation-service@^5.3.1:
   resolved "https://registry.npmjs.org/react-native-geolocation-service/-/react-native-geolocation-service-5.3.1.tgz"
   integrity sha512-LTXPtPNmrdhx+yeWG47sAaCgQc3nG1z+HLLHlhK/5YfOgfLcAb9HAkhREPjQKPZOUx8pKZMIpdGFUGfJYtimXQ==
 
-react-native-gesture-handler@^2.15.0:
-  version "2.15.0"
-  resolved "https://registry.npmjs.org/react-native-gesture-handler/-/react-native-gesture-handler-2.15.0.tgz"
-  integrity sha512-cmMGW8k86o/xgVTBZZOPohvR5re4Vh65PUxH4HbBBJAYTog4aN4wTVTUlnoky01HuSN8/X4h3tI/K3XLPoDnsg==
+react-native-gesture-handler@^2.14.0:
+  version "2.14.0"
+  resolved "https://registry.npmjs.org/react-native-gesture-handler/-/react-native-gesture-handler-2.14.0.tgz"
+  integrity sha512-cOmdaqbpzjWrOLUpX3hdSjsMby5wq3PIEdMq7okJeg9DmCzanysHSrktw1cXWNc/B5MAgxAn9J7Km0/4UIqKAQ==
   dependencies:
     "@egjs/hammerjs" "^2.0.17"
     hoist-non-react-statics "^3.3.0"
@@ -6301,6 +6301,11 @@ react-native-size-matters@^0.4.0:
   version "0.4.2"
   resolved "https://registry.npmjs.org/react-native-size-matters/-/react-native-size-matters-0.4.2.tgz"
   integrity sha512-DKE3f/sdcozd24oASgkP1iGg+YU3HoajRa5k3a4wkRzpiqREq8SGX12Y5zBgAt/8IivLQoTMYkyQu1/Giuy+zQ==
+
+react-native-sound-player@^0.13.2:
+  version "0.13.2"
+  resolved "https://registry.npmjs.org/react-native-sound-player/-/react-native-sound-player-0.13.2.tgz"
+  integrity sha512-m457mjp496sARAED7epYzbhorfiLZ3j6HzJn7zEL9RU+ZJKcans/0gFNUEBvlh31fSDZRliQ2WwE4mJ6836bNg==
 
 react-native-splash-screen@^3.3.0:
   version "3.3.0"

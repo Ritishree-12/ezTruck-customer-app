@@ -3,7 +3,6 @@ import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet, Pressable,S
 import axios from 'axios';
 import {useDispatch} from 'react-redux';
 import {registerSuccess} from '../utils/loginReducer';
-import { SafeAreaView } from "react-native-safe-area-context";
 import GoogleSignin from "../Services/google";
 import { statusCodes } from '@react-native-google-signin/google-signin';
 import { getFcmToken } from "../utils/notificationServices";
@@ -168,8 +167,6 @@ const styles = StyleSheet.create({
     color: "#EE272E",
     fontWeight: "bold",
     fontSize: 24,
-    // marginBottom: 20,
-    // paddingHorizontal: 14,
     width:'100%',
     height:40
   },
@@ -186,7 +183,7 @@ const styles = StyleSheet.create({
     color: "grey",
   },
   inputError: {
-    borderColor: "red", // Change border color for error state
+    borderColor: "red",
   },
   errorMessage: {
     color: "red",

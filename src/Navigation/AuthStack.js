@@ -63,16 +63,16 @@ const AuthStack = () => {
             component={BookingConfirmation}
             options={{ headerShown: false }}
           />
-          {/* <Stack.Screen
+          <Stack.Screen
             name="Payment"
             component={PaymentScreen}
             options={{ headerShown: false }}
-          /> */}
-            {/* <Stack.Screen
+          />
+            <Stack.Screen
             name="FeedBack"
             component={FeedBack}
             options={{ headerShown: false }}
-          /> */}
+          />
         </>
       ) : (
         <>

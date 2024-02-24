@@ -94,7 +94,9 @@ const ItemComponent = ({ item, onCardSelect, backgroundColor, textColor, distanc
                 fontSize={26} />
             </TouchableOpacity>
 
-            <Image source={item.image} />
+            <View>
+              <Image source={item.image} style={{width:160,height:100,marginTop:10}}/>
+              </View>
             <Text style={styles.modalText}>{item.weitage}</Text>
             <Text style={{ textAlign: "center", fontSize: 13, fontWeight: '600', color: "gray", padding: 5 }}>
               {item.itemDetails}
@@ -113,24 +115,25 @@ const ItemComponent = ({ item, onCardSelect, backgroundColor, textColor, distanc
               <View>
                 <Text style={styles.detailLabel}>Distance:</Text>
                 <Text style={styles.detailLabel}>Duration:</Text>
-                <Text style={styles.detailLabel}>Total Estimate:</Text>
+                {/* <Text style={styles.detailLabel}>Total Estimate:</Text> */}
               </View>
 
               <View style={{ flexDirection: "column", alignItems: "flex-end" }}>
                 <Text style={styles.detailValue}>{distance}</Text>
                 <Text style={styles.detailValue}>{duration}</Text>
-                <Text style={styles.detailValue}>₹{''}</Text>
+                {/* <Text style={styles.detailValue}>₹{''}</Text> */}
               </View>
             </View>
             <View
               style={{
                 flexDirection: "row",
-                justifyContent: "space-around",
+                justifyContent: 'space-between',
                 marginTop: 30,
-                margin: 30
+                width:'100%',
+                padding:20
               }}
             >
-              <Image source={require("../../../assets/groupimg.png")} />
+              <Image source={require("../../../assets/groupimg.png")} style={{width:130,height:60}} />
               <TouchableOpacity
                 onPress={() => {
                   setModalVisible(false);
@@ -182,7 +185,8 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     borderRadius: 20,
     alignItems: "center",
-    height: '80%'
+    height: '80%',
+    // padding:10
   },
   modalText: {
     fontSize: 24,
@@ -196,11 +200,9 @@ const styles = StyleSheet.create({
     color: "#fff",
     textAlign: "center",
     backgroundColor: "#EE272E",
-    width: 130,
-    height: 50,
+    paddingHorizontal:40,
     borderRadius: 40,
-    padding: 9,
-    marginLeft: 10
+    paddingVertical: 10,
   },
   closeButtonModal: {
     position: 'absolute',
@@ -231,13 +233,11 @@ const styles = StyleSheet.create({
     color: 'gray',
     fontSize: 16,
     marginRight: 60,
-    // marginBottom: 5, // Add spacing between label and value
   },
   detailValue: {
     color: 'gray',
     fontSize: 16,
     marginLeft: 40,
-    // marginBottom: 5, 
   },
   totalAmount: {
     color: "#EE272E",
